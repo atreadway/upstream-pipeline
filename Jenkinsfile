@@ -9,6 +9,7 @@ pipeline {
     stage('Testing') {
       steps {
         sh 'sleep 5'
+        sh 'echo Tests Completed!'
       }
     }
   }
