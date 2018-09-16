@@ -17,6 +17,7 @@ pipeline {
         script {
           publishEvent simpleEvent('testingCompleted')
         }
+
       }
     }
   }
