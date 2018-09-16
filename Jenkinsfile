@@ -6,7 +6,7 @@ pipeline {
         echo 'Build the software'
       }
     }
-    stage('Testing') {
+    stage('Test') {
       steps {
         sh 'sleep 5'
         sh 'echo Tests Completed!'
@@ -14,7 +14,9 @@ pipeline {
     }
     stage('Publish Event') {
       steps {
-        publishEvent simpleEvent('testingCompleted')
+        script {
+          publishEvent simpleEvent('testingCompleted')
+        }
       }
     }
   }
